@@ -1,0 +1,54 @@
+oWebsite : infor
+        : 
+
+Flow : 
+
+SE : Fundamental : logic , syntax    
+    : C,C++, Database,Sql,nosql
+ 
+Front-end : HTML , Show user : clinet 
+	    CSS : effect 
+	   Javascript : Event 
+	    REACT,agu,vue,next 
+
+Back-end : Hide admin : server
+	 python,
+	java, php,.net,node
+
+	danjgo,spring, larvel 
+
+Auth 
+Token : local,session,cokkies 
+CRUD: Create,read,update,delete
+API : rest fully 
+pyment : cash,online 
+otp : email,phone 
+
+
+https://www.google.com : address 
+
+
+http  : without secure
+https : secure
+
+Domain :.in
+.edu
+
+Hosting : code step
+
+clinet : user : req
+server : clinet request , accept,reject  respo 
+
+
+Static Website  : Fast , manully depoly
+dynamic website : 24/7 , product base , auto deploy slow
+
+
+SDLC : 
+
+
+
+
+
+
+	
