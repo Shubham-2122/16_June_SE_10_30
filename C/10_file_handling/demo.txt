@@ -1,0 +1,2 @@
+hello this demo text file
+this is append mode data new line
