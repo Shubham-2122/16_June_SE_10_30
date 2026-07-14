@@ -27,8 +27,6 @@ int main()
 	ob.getdata();
 	ob.data();
 	
-	cout<<"A :"<<a;
-	
 
 	
 	return 0;
