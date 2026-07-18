@@ -1,0 +1,20 @@
+ab 1: Add a column course_duration to the courses table 
+
+	
+ALTER TABLE courses 
+ADD course_duration VARCHAR(50);
+
+
+Lab 2: Drop the course_credits column from the courses table 
+
+
+ALTER TABLE courses 
+DROP COLUMN course_credits;
+
+ALTER TABLE student
+DROP COLUMN city;
+
+
+UPDATE teachers
+set course_time = 2
+WHERE teacher_id = 1;  

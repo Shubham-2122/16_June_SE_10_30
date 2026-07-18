@@ -1,0 +1,23 @@
+INSERT INTO student (student_id,student_name,age,course,city)
+VALUE(1,'jatin',21,"python","ahemdabad");
+
+INSERT INTO student (S_id,S_name,S_age,S_course) 
+VALUE (1,"het patel",21,"Front-end");
+
+-- Insert five records into the students table 
+INSERT INTO students (student_id, student_name, age, class, address) 
+VALUES 
+(1, 'shubham Mehta', 14, '8A', 'Ahmedabad'), 
+(2, 'sujal Patel', 13, '7B', 'Surat'), 
+(3, 'prshant Sharma', 15, '9C', 'Vadodara'), 
+(4, 'Sneha Desai', 12, '6A', 'Rajkot'), 
+(5, 'jigar Joshi', 14, '8B', 'Bhavnagar');
+
+INSERT INTO student (S_id,S_name,S_age,S_course)
+VALUES
+(2,"parth",23,"back-end"),
+(3,"ketan",23,"Full-stack"),
+(4,"anshu",25,"Mern-stack");
+
+-- Retrieve all records using SELECT statement 
+SELECT * FROM students; 

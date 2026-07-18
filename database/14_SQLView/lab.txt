@@ -1,0 +1,22 @@
+Theory Questions 
+1. View: A virtual table based on the result set of a query. It does 
+not store data itself. 
+2. Advantages: 
+a. Simplifies queries 
+b. Enhances security 
+c. Maintains abstraction 
+Lab Exercises 
+
+
+• Lab 1: View of Employees with Departments 
+CREATE VIEW emp_dept_view AS 
+SELECT e.employee_name, d.department_name 
+FROM employees e 
+JOIN departments d ON e.department_id = d.department_id; 
+
+• Lab 2: Modify View to Filter Salary 
+CREATE OR REPLACE VIEW emp_dept_view AS 
+SELECT e.employee_name, d.department_name 
+FROM employees e 
+JOIN departments d ON e.department_id = d.department_id 
+WHERE e.salary >= 50000;

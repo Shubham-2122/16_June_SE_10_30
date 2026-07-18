@@ -1,0 +1,460 @@
+
+1) primary key :- iner only one key
+CREATE TABLE Department (
+    DeptID INT PRIMARY KEY AUTO_INCREMENT,
+    DeptName VARCHAR(50)
+);
+
+forgin key :- table another primary re
+Refre forgin
+
+CREATE TABLE Employee (
+	EmpId int PRIMARY KEY,
+    EmpName VARCHAR(50),
+    Salary DECIMAL(10,2),
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES department(DeptID)
+);
+
+INSERT INTO Department (DeptID, DeptName) VALUES
+(1, 'HR'),
+(2, 'Sales'),
+(3, 'IT');
+
+
+inner join :- both match data
+
+SELECT  
+	Employee.EmpID,
+    Employee.EmpName,
+    Employee.Salary,
+    Department.DeptName
+FROM 
+	employee
+INNER JOIN
+	department
+ON
+	employee.DeptID = department.DeptID; 
+
+
+left join
+
+-- LEFT JOIN (all employees even if no department)
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Employee.Salary,
+    Department.DeptName
+FROM 
+    Employee
+LEFT JOIN 
+    Department
+ON 
+    Employee.DeptID = Department.DeptID;
+
+
+-- RIGHT JOIN (all departments even if no employee)
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Employee.Salary,
+    Department.DeptName
+FROM 
+    Employee
+RIGHT JOIN 
+    Department
+ON 
+    Employee.DeptID = Department.DeptID;
+
+
+exmple show many
+Skip to content
+Chat history
+
+You said:
+Primary key and foreign key example and query fire in table relationship data show
+ChatGPT said:
+Let’s go step–by–step 👇
+
+🧩 1. Create Two Tables with Primary and Foreign Keys
+We'll take an example of Departments and Employees.
+
+➤ Table 1: Departments
+Each department has a unique ID — this is the Primary Key.
+
+CREATE TABLE Departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+➤ Table 2: Employees
+Each employee belongs to one department — this uses a Foreign Key.
+
+CREATE TABLE Employees (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(50),
+    salary DECIMAL(10,2),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES Departments(dept_id)
+);
+🧠 2. Insert Sample Data
+INSERT INTO Departments (dept_id, dept_name)
+VALUES (1, 'HR'), (2, 'Sales'), (3, 'IT');
+
+INSERT INTO Employees (emp_id, emp_name, salary, dept_id)
+VALUES
+(101, 'John', 50000, 1),
+(102, 'Ravi', 55000, 2),
+(103, 'Neha', 60000, 3),
+(104, 'Sita', 52000, 1);
+🔍 3. View Individual Tables
+SELECT * FROM Departments;
+SELECT * FROM Employees;
+🔗 4. Join Tables (Show Relationship Data)
+Use an INNER JOIN to show which employee belongs to which department:
+
+SELECT 
+    e.emp_id,
+    e.emp_name,
+    e.salary,
+    d.dept_name
+FROM 
+    Employees e
+INNER JOIN 
+    Departments d
+ON 
+    e.dept_id = d.dept_id;
+✅ Result:
+
+emp_id	emp_name	salary	dept_name
+101	John	50000	HR
+102	Ravi	55000	Sales
+103	Neha	60000	IT
+104	Sita	52000	HR
+🧾 5. Optional – Show Employees Without Departments
+(If some employees don’t have a department yet)
+
+SELECT 
+    e.emp_id, e.emp_name, d.dept_name
+FROM 
+    Employees e
+LEFT JOIN 
+    Departments d
+ON 
+    e.dept_id = d.dept_id;
+Would you like me to also show how to update or delete data while keeping the relationship (foreign key constraint) valid?
+
+You said:
+Primary key and foreign key example and query fire in table relationship data show In pure sql
+ChatGPT said:
+Here’s the pure SQL version — no explanation text, only SQL commands 👇
+
+-- Create Department table (Primary Key)
+CREATE TABLE Department (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(50)
+);
+
+-- Create Employee table (Foreign Key)
+CREATE TABLE Employee (
+    EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(50),
+    Salary DECIMAL(10,2),
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES Department(DeptID)
+);
+
+-- Insert data into Department table
+INSERT INTO Department (DeptID, DeptName) VALUES
+(1, 'HR'),
+(2, 'Sales'),
+(3, 'IT');
+
+-- Insert data into Employee table
+INSERT INTO Employee (EmpID, EmpName, Salary, DeptID) VALUES
+(101, 'John', 50000, 1),
+(102, 'Ravi', 55000, 2),
+(103, 'Neha', 60000, 3),
+(104, 'Sita', 52000, 1);
+
+-- View data in both tables
+SELECT * FROM Department;
+SELECT * FROM Employee;
+
+-- Join both tables to show relationship data
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Employee.Salary,
+    Department.DeptName
+FROM 
+    Employee
+INNER JOIN 
+    Department
+ON 
+    Employee.DeptID = Department.DeptID;
+Would you like me to show also the LEFT JOIN and RIGHT JOIN pure SQL examples for the same tables?
+
+You said:
+Yes
+ChatGPT said:
+Here’s the pure SQL code for INNER JOIN, LEFT JOIN, and RIGHT JOIN examples 👇
+
+-- Create Department table
+CREATE TABLE Department (
+    DeptID INT PRIMARY KEY,
+    DeptName VARCHAR(50)
+);
+
+-- Create Employee table
+CREATE TABLE Employee (
+    EmpID INT PRIMARY KEY,
+    EmpName VARCHAR(50),
+    Salary DECIMAL(10,2),
+    DeptID INT,
+    FOREIGN KEY (DeptID) REFERENCES Department(DeptID)
+);
+
+-- Insert Department data
+INSERT INTO Department (DeptID, DeptName) VALUES
+(1, 'HR'),
+(2, 'Sales'),
+(3, 'IT'),
+(4, 'Marketing');
+
+-- Insert Employee data
+INSERT INTO Employee (EmpID, EmpName, Salary, DeptID) VALUES
+(101, 'John', 50000, 1),
+(102, 'Ravi', 55000, 2),
+(103, 'Neha', 60000, 3),
+(104, 'Sita', 52000, 1),
+(105, 'Amit', 48000, NULL);
+
+-- View tables
+SELECT * FROM Department;
+SELECT * FROM Employee;
+
+-- INNER JOIN (only matching records)
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Employee.Salary,
+    Department.DeptName
+FROM 
+    Employee
+INNER JOIN 
+    Department
+ON 
+    Employee.DeptID = Department.DeptID;
+
+-- LEFT JOIN (all employees even if no department)
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Employee.Salary,
+    Department.DeptName
+FROM 
+    Employee
+LEFT JOIN 
+    Department
+ON 
+    Employee.DeptID = Department.DeptID;
+
+-- RIGHT JOIN (all departments even if no employee)
+SELECT 
+    Employee.EmpID,
+    Employee.EmpName,
+    Employee.Salary,
+    Department.DeptName
+FROM 
+    Employee
+RIGHT JOIN 
+    Department
+ON 
+    Employee.DeptID = Department.DeptID;
+Would you like me to also include a FULL JOIN example (shows all matching and non-matching rows from both tables)?
+
+You said:
+Any another query apply for this time
+ChatGPT said:
+Absolutely! There are many other SQL queries you can apply on these tables to analyze the relationship between Employee and Department. Here’s a list of useful examples in pure SQL:
+
+1️⃣ Count Employees in Each Department
+SELECT 
+    d.DeptName,
+    COUNT(e.EmpID) AS EmployeeCount
+FROM 
+    Department d
+LEFT JOIN 
+    Employee e
+ON 
+    d.DeptID = e.DeptID
+GROUP BY 
+    d.DeptName;
+2️⃣ Show Employees With Salary Greater Than 50000
+SELECT 
+    EmpName,
+    Salary,
+    DeptID
+FROM 
+    Employee
+WHERE 
+    Salary > 50000;
+3️⃣ Find Department With Highest Paid Employee
+SELECT 
+    e.EmpName,
+    e.Salary,
+    d.DeptName
+FROM 
+    Employee e
+INNER JOIN 
+    Department d
+ON 
+    e.DeptID = d.DeptID
+ORDER BY 
+    e.Salary DESC
+LIMIT 1;
+4️⃣ List Employees Without Department
+SELECT 
+    EmpID,
+    EmpName,
+    Salary
+FROM 
+    Employee
+WHERE 
+    DeptID IS NULL;
+5️⃣ Update Employee Department
+UPDATE Employee
+SET DeptID = 4
+WHERE EmpName = 'Amit';
+6️⃣ Delete Employee
+DELETE FROM Employee
+WHERE EmpID = 105;
+7️⃣ Sum of Salaries Per Department
+SELECT 
+    d.DeptName,
+    SUM(e.Salary) AS TotalSalary
+FROM 
+    Department d
+LEFT JOIN 
+    Employee e
+ON 
+    d.DeptID = e.DeptID
+GROUP BY 
+    d.DeptName;
+If you want, I can make a full list of 20+ SQL queries for Primary & Foreign Key relationships that you can just run on these tables.
+
+Do you want me to do that?
+
+You said:
+This example can we convert student and teachers 
+ChatGPT said:
+Absolutely! We can convert the same example to Students and Teachers. Here’s the pure SQL version for a similar relationship:
+
+One teacher can have many students (so TeacherID is Primary Key in Teachers and Foreign Key in Students).
+
+-- Create Teachers table (Primary Key)
+CREATE TABLE Teachers (
+    TeacherID INT PRIMARY KEY,
+    TeacherName VARCHAR(50),
+    Subject VARCHAR(50)
+);
+
+-- Create Students table (Foreign Key)
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    StudentName VARCHAR(50),
+    Age INT,
+    TeacherID INT,
+    FOREIGN KEY (TeacherID) REFERENCES Teachers(TeacherID)
+);
+
+-- Insert data into Teachers table
+INSERT INTO Teachers (TeacherID, TeacherName, Subject) VALUES
+(1, 'Mr. Sharma', 'Math'),
+(2, 'Ms. Gupta', 'Science'),
+(3, 'Mr. Verma', 'English');
+
+-- Insert data into Students table
+INSERT INTO Students (StudentID, StudentName, Age, TeacherID) VALUES
+(101, 'Ravi', 15, 1),
+(102, 'Neha', 16, 2),
+(103, 'Amit', 15, 1),
+(104, 'Sita', 16, 3),
+(105, 'Anjali', 15, NULL);  -- Student without teacher yet
+
+-- View tables
+SELECT * FROM Teachers;
+SELECT * FROM Students;
+
+-- INNER JOIN: Show students with their teachers
+SELECT 
+    s.StudentID,
+    s.StudentName,
+    s.Age,
+    t.TeacherName,
+    t.Subject
+FROM 
+    Students s
+INNER JOIN 
+    Teachers t
+ON 
+    s.TeacherID = t.TeacherID;
+
+-- LEFT JOIN: Show all students, even if no teacher assigned
+SELECT 
+    s.StudentID,
+    s.StudentName,
+    s.Age,
+    t.TeacherName,
+    t.Subject
+FROM 
+    Students s
+LEFT JOIN 
+    Teachers t
+ON 
+    s.TeacherID = t.TeacherID;
+
+-- RIGHT JOIN: Show all teachers, even if they have no students
+SELECT 
+    s.StudentID,
+    s.StudentName,
+    s.Age,
+    t.TeacherName,
+    t.Subject
+FROM 
+    Students s
+RIGHT JOIN 
+    Teachers t
+ON 
+    s.TeacherID = t.TeacherID;
+
+-- Count of students per teacher
+SELECT 
+    t.TeacherName,
+    COUNT(s.StudentID) AS StudentCount
+FROM 
+    Teachers t
+LEFT JOIN 
+    Students s
+ON 
+    t.TeacherID = s.TeacherID
+GROUP BY 
+    t.TeacherName;
+
+-- List students without a teacher
+SELECT 
+    StudentID,
+    StudentName,
+    Age
+FROM 
+    Students
+WHERE TeacherID IS NULL;
+If you want, I can also create 20+ more queries like salary sum, max/min age, update teacher assignment, delete student, etc., all in the Student–Teacher scenario.
+
+Do you want me to do that?
+
+
+
+
+
+

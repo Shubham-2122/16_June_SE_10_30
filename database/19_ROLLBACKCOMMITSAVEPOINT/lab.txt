@@ -1,0 +1,28 @@
+Theory Questions 
+1. SAVEPOINT: Marks a point in a transaction to rollback to without 
+affecting prior changes. 
+a. COMMIT: Saves changes permanently. 
+b. ROLLBACK: Undoes changes since last COMMIT or to a 
+SAVEPOINT. 
+2. Use of SAVEPOINT: Useful in long transactions where partial 
+rollbacks may be needed without restarting everything. 
+Lab Exercises 
+
+
+• Lab 1: Insert and ROLLBACK to SAVEPOINT 
+START TRANSACTION; 
+INSERT INTO courses VALUES (201, 'English', '3 Months'); 
+SAVEPOINT sp1; 
+INSERT INTO courses VALUES (202, 'French', '2 Months'); 
+ROLLBACK TO sp1; 
+COMMIT; 
+
+
+• Lab 2: Partial Commit and ROLLBACK 
+START TRANSACTION; 
+INSERT INTO courses VALUES (203, 'German', '3 Months'); 
+SAVEPOINT sp2; 
+INSERT INTO courses VALUES (204, 'Spanish', '4 Months'); 
+COMMIT; 
+INSERT INTO courses VALUES (205, 'Chinese', '2 Months'); 
+ROLLBACK TO sp2;

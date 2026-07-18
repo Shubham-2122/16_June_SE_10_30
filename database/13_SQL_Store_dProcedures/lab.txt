@@ -1,0 +1,26 @@
+heory Questions 
+1. Stored Procedure: A reusable set of SQL statements stored in the 
+database. Unlike standard SQL, it can accept parameters. 
+2. Advantages: 
+a. Reusability 
+b. Improved performance 
+c. Enhanced security 
+Lab Exercises 
+
+
+• Lab 1: Procedure to Get Employees by Department 
+DELIMITER // 
+CREATE PROCEDURE GetEmployeesByDept(IN dept_id INT) 
+BEGIN 
+SELECT * FROM employees WHERE department_id = dept_id; 
+END // 
+DELIMITER ; 
+
+
+• Lab 2: Procedure for Course Details 
+DELIMITER // 
+CREATE PROCEDURE GetCourseDetails(IN c_id INT) 
+BEGIN 
+SELECT * FROM courses WHERE course_id = c_id; 
+END // 
+DELIMITER ; 

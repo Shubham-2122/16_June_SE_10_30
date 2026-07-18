@@ -1,0 +1,20 @@
+Theory Questions 
+1. GROUP BY Clause: Groups rows with the same values into summary 
+rows (used with functions like COUNT, AVG, etc.). 
+2. GROUP BY vs ORDER BY: 
+a. GROUP BY: Groups data. 
+b. ORDER BY: Sorts data. 
+Lab Exercises 
+
+
+• Lab 1: Count Employees Per Department
+ 
+SELECT department_id, COUNT(*) AS total_employees 
+FROM employees 
+GROUP BY department_id; 
+
+Lab 2: Average Salary 
+
+SELECT department_id, AVG(salary) AS avg_salary 
+FROM employees 
+GROUP BY department_id;

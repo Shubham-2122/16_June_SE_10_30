@@ -1,0 +1,12 @@
+Lab 1: Create the courses table 
+
+
+CREATE TABLE courses ( 
+	course_id INT PRIMARY KEY, 
+	course_name VARCHAR(100), 
+course_credits INT 
+); 
+
+
+Lab 2: Create a new database university_db 
+CREATE DATABASE university_db; 

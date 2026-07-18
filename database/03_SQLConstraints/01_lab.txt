@@ -1,0 +1,14 @@
+Lab 1: Create the teachers table with constraints 
+
+CREATE TABLE teachers ( 
+	teacher_id INT PRIMARY KEY, 
+	teacher_name VARCHAR(100) NOT NULL, 
+	subject VARCHAR(50) NOT NULL, 
+	email VARCHAR(100) UNIQUE 
+); 
+
+INSERT INTO teachers (teacher_name,subject,email) 
+VALUES
+('jiger sir','python','jiger@gmail.com'),
+('shubhma sir','front-end','shubham@gmail.com'),
+('parashant','java','parashant@gmail.com');

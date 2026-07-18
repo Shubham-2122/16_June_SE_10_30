@@ -1,0 +1,30 @@
+
+Table view alge banavo hoy to
+
+CREATE VIEW student_view AS
+SELECT fname, email FROM student;
+VIEW → एक तरह का virtual table
+
+-> View एक virtual table होती है जो किसी query के result पर आधारित होती है।
+-> View के अंदर data store नहीं होता, बल्कि यह हमेशा original tables से data लेती है।
+
+2. View with WHERE Condition
+CREATE VIEW mumbai_students AS
+SELECT name, mobile
+FROM student
+WHERE city = 'Mumbai';
+
+3. Join View
+CREATE VIEW student_course AS
+SELECT s.name, c.course_name
+FROM student s
+JOIN enrollment e ON s.student_id = e.student_id
+JOIN course c ON e.course_id = c.course_id;
+
+Student और Course की details एक साथ दिखेंगी।
+
+4. View with Aggregation
+CREATE VIEW course_strength AS
+SELECT course_id, COUNT(student_id) AS total_students
+FROM enrollment
+GROUP BY course_id;

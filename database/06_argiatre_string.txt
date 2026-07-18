@@ -1,0 +1,13 @@
+1) max
+SELECT MAX(student_age) FROM students;
+
+2)avg
+SELECT AVG(student_age) FROM students;
+
+3) sum
+SELECT SUM(student_age) FROM students;
+
+4) min
+SELECT MIN(student_age) FROM students;
+
+SELECT upper(student_name) FROM students;

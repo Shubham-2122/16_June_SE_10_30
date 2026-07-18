@@ -1,0 +1,10 @@
+Lab 1: Create users and grant SELECT to user1 
+
+
+CREATE USER 'user1'@'localhost' IDENTIFIED BY 'password1'; 
+CREATE USER 'user2'@'localhost' IDENTIFIED BY 'password2'; 
+GRANT SELECT ON school_db.courses TO 'user1'@'localhost'; 
+
+Lab 2: Revoke INSERT from user1 and grant it to user2 
+REVOKE INSERT ON school_db.courses FROM 'user1'@'localhost'; 
+GRANT INSERT ON school_db.courses TO 'user2'@'localhost';

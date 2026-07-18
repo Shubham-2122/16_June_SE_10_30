@@ -1,0 +1,59 @@
+
+QL में Procedure (जिसे Stored Procedure भी कहते हैं) एक predefined program होता है, जिसमें हम SQL queries को store करके बार-बार चला सकते हैं।
+
+🔹 Stored Procedure क्या है?
+
+SQL statements का एक set होता है जिसे database में save किया जाता है।
+
+Procedure को हम CALL करके चला सकते हैं।
+
+इसमें हम parameters भी दे सकते हैं (जैसे function में देते हैं)।
+
+Use होता है reusability, security और performance के लिए।
+
+🔹 Procedure का Use
+
+बार-बार use होने वाली queries को save करना।
+
+Performance बेहतर करना (precompiled होती है)।
+
+Code reuse और maintain करना आसान होता है।
+
+Security (User को सिर्फ procedure access दिया जा सकता है, table पर direct access नहीं)।
+
+
+1) Procedure create karva
+
+DELIMITER //
+
+CREATE PROCEDURE GetStudents()
+BEGIN
+    SELECT * FROM student;
+END //
+
+DELIMITER ;
+
+2) Procedure चलाना:
+CALL GetStudents();
+
+
+producer like function
+
+parameter create 
+
+DELIMITER //
+CREATE PROCEDURE GetstudentbyId(IN stu_id INT)
+BEGIN
+	SELECT * FROM student WHERE id = stu_id  && Student_cours = name;
+END //
+DELIMITER ;
+
+call GetstudentbyId(1);
+
+
+
+
+
+
+
+

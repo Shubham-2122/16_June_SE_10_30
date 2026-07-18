@@ -1,0 +1,58 @@
+जब नया student insert हो, तो उसकी entry Log table में अपने आप चली जाए
+
+1. Main Table (students)
+CREATE TABLE students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    fname VARCHAR(50),
+    lname VARCHAR(50),
+    email VARCHAR(100),
+    mobile VARCHAR(15)
+);
+
+2. Log Table (changes track करने के लिए)
+
+CREATE TABLE student_log (
+    log_id INT PRIMARY KEY AUTO_INCREMENT,
+    action VARCHAR(20),
+    fname VARCHAR(50),
+    lname VARCHAR(50),
+    email VARCHAR(100),
+    mobile VARCHAR(15),
+    action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+3. Trigger बनाना (AFTER INSERT)
+
+DELIMITER //
+CREATE TRIGGER after_student_insert
+AFTER INSERT on student
+FOR EACH ROW
+BEGIN
+	INSERT INTO student_log (ACTION, fname, lanme, email, mobile)
+    VALUES ('INSERT',NEW.fname, NEW.lanme, NEW.email, NEW.mobile);
+END //
+
+DELIMITER ;
+
+4. orginal table data insert so 
+
+INSERT INTO student (fname, lanme, email, mobile) 
+VALUES ('parshant', 'shukhla', 'parshant@gmail.com', '978677677');
+
+5. after table dummy action how to perfrom
+
+
+
+
+Log_table
+CREATE TABLE Student_log (
+	log_id INT PRIMARY KEY AUTO_INCREMENT,
+    action varchar(255),
+    student_name varchar(100),
+    student_age int,
+    course varchar(100),
+    action_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+

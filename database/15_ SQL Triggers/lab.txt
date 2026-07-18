@@ -1,0 +1,26 @@
+Theory Questions 
+1. Trigger: A procedure that automatically executes in response to 
+events like INSERT, UPDATE, DELETE. 
+a. BEFORE/AFTER INSERT 
+b. BEFORE/AFTER UPDATE 
+c. BEFORE/AFTER DELETE 
+2. Differences: 
+a. INSERT: Fires on new row addition. 
+b. UPDATE: Fires when row data changes. 
+c. DELETE: Fires before or after row deletion. 
+Lab Exercises 
+
+
+• Lab 1: Log INSERT 
+CREATE TRIGGER log_employee_insert 
+AFTER INSERT ON employees 
+FOR EACH ROW 
+INSERT INTO employee_log (action, employee_id, log_time) 
+VALUES ('INSERT', NEW.employee_id, NOW());
+
+ 
+• Lab 2: Update Last Modified 
+CREATE TRIGGER update_last_modified 
+BEFORE UPDATE ON employees 
+FOR EACH ROW 
+SET NEW.last_modified = NOW(); 

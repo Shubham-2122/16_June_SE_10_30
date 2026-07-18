@@ -1,0 +1,23 @@
+Lab 1: Drop the teachers Table from school_db
+
+-> Use the database
+USE school_db;
+
+-> Drop the teachers table
+DROP TABLE IF EXISTS teachers;
+
+->  Verify that the table is dropped
+SHOW TABLES;
+
+Lab 2: Drop the students Table from school_db and Verify
+
+-> Use the database
+USE school_db;
+
+-> Drop the students table
+DROP TABLE IF EXISTS students;
+
+-> Verify that the table is dropped
+SHOW TABLES;
+
+drop database-name;

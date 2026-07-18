@@ -1,0 +1,17 @@
+Lab 2: Add a FOREIGN KEY constraint from students to teachers
+ 
+Assuming the students table has a teacher_id column (you may need to add it if not present):
+ 
+-- First, add the teacher_id column to the students table (if not already present) 
+
+ALTER TABLE students 
+ADD teacher_id INT; 
+
+ALTER TABLE teachers
+add course_time int;
+
+-- Then, add the FOREIGN KEY constraint 
+ALTER TABLE students 
+ADD CONSTRAINT fk_teacher 
+FOREIGN KEY (teacher_id) 
+REFERENCES teachers(teacher_id);

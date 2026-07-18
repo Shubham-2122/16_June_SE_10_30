@@ -1,0 +1,22 @@
+Lab 1: Insert three records into the courses table 
+
+
+INSERT INTO courses (course_id, course_name, course_duration) 
+VALUES (101, 'Mathematics', '3 Months'), 
+(102, 'Physics', '4 Months'), 
+(103, 'Chemistry', '3.5 Months'); 
+
+Lab 2: Update course duration of a specific course 
+
+
+UPDATE courses 
+
+SET course_duration = '5 Months' 
+WHERE course_id = 102; 
+
+
+Lab 3: Delete a course by course_id
+ 
+DELETE FROM courses 
+
+WHERE course_id = 103;

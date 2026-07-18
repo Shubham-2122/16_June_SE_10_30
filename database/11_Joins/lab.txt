@@ -1,0 +1,26 @@
+heory Questions
+ 
+1. JOIN in SQL: Joins combine rows from two or more tables based on 
+a related column. 
+a. INNER JOIN: Returns only matching rows. 
+b. LEFT JOIN: Returns all rows from the left table and matching 
+rows from the right. 
+c. RIGHT JOIN: Returns all rows from the right table and 
+matching rows from the left. 
+d. FULL OUTER JOIN: Returns all rows when there's a match in 
+either table. 
+2. Joins for Combining Data: Joins allow you to query data from 
+multiple tables as if they are one, helping relate information 
+like employees and their departments.
+
+Lab 1: INNER JOIN 
+
+SELECT e.employee_name, d.department_name 
+FROM employees e 
+INNER JOIN departments d ON e.department_id = d.department_id; 
+
+
+Lab 2: LEFT JOIN 
+SELECT d.department_name, e.employee_name 
+FROM departments d 
+LEFT JOIN employees e ON d.department_id = e.department_id; 

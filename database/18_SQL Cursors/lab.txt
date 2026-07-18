@@ -1,0 +1,38 @@
+Theory Questions 
+1. Cursor: Used to process rows returned by SQL one at a time. 
+a. Implicit: Automatically managed by PL/SQL. 
+b. Explicit: Manually defined and controlled. 
+2. Use of Explicit Cursor: Needed when multiple rows are processed 
+row-by-row, allowing custom logic. 
+Lab Exercises 
+
+
+• Lab 1: Cursor for Employees 
+DECLARE 
+CURSOR emp_cursor IS SELECT employee_name, salary FROM employees; 
+emp_record emp_cursor%ROWTYPE; 
+BEGIN 
+OPEN emp_cursor; 
+LOOP 
+FETCH emp_cursor INTO emp_record; 
+EXIT WHEN emp_cursor%NOTFOUND; 
+DBMS_OUTPUT.PUT_LINE(emp_record.employee_name || ' - ' || 
+emp_record.salary); 
+END LOOP; 
+CLOSE emp_cursor; 
+END; 
+
+
+• Lab 2: Cursor for Courses 
+DECLARE 
+CURSOR course_cursor IS SELECT * FROM courses; 
+course_rec course_cursor%ROWTYPE; 
+BEGIN 
+OPEN course_cursor; 
+LOOP 
+FETCH course_cursor INTO course_rec; 
+EXIT WHEN course_cursor%NOTFOUND; 
+DBMS_OUTPUT.PUT_LINE(course_rec.course_name); 
+END LOOP; 
+CLOSE course_cursor; 
+END;

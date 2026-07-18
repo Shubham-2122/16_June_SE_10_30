@@ -1,0 +1,26 @@
+Theory Questions 
+1. PL/SQL: Oracle's extension to SQL. Adds procedural capabilities 
+(variables, loops, etc.) 
+2. Benefits: 
+a. Better performance 
+b. Error handling 
+c. Modular programming 
+Lab Exercises 
+
+
+• Lab 1: Count Employees 
+DECLARE 
+total_emp NUMBER; 
+BEGIN 
+SELECT COUNT(*) INTO total_emp FROM employees; 
+DBMS_OUTPUT.PUT_LINE('Total Employees: ' || total_emp); 
+END; 
+
+
+• Lab 2: Total Sales 
+DECLARE 
+total_sales NUMBER; 
+BEGIN 
+SELECT SUM(sale_amount) INTO total_sales FROM orders; 
+DBMS_OUTPUT.PUT_LINE('Total Sales: ' || total_sales); 
+END; 

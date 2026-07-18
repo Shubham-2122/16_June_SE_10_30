@@ -1,0 +1,28 @@
+Theory Questions 
+1. Control Structures: Logic used to control flow. 
+a. IF-THEN 
+b. LOOP, WHILE, FOR 
+2. Use in Complex Queries: They allow conditional logic, iteration, 
+and dynamic control over query execution. 
+Lab Exercises 
+
+
+• Lab 1: IF-THEN Block 
+DECLARE 
+dept_id employees.department_id%TYPE; 
+BEGIN 
+SELECT department_id INTO dept_id FROM employees WHERE employee_id = 
+101; 
+IF dept_id = 10 THEN 
+DBMS_OUTPUT.PUT_LINE('IT Department'); 
+END IF; 
+END; 
+
+• Lab 2: FOR LOOP 
+DECLARE 
+emp_name employees.employee_name%TYPE; 
+BEGIN 
+FOR emp IN (SELECT employee_name FROM employees) LOOP 
+DBMS_OUTPUT.PUT_LINE(emp.employee_name); 
+END LOOP; 
+END; 

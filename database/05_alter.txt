@@ -1,0 +1,46 @@
+8. Table बदलना (ALTER)
+
+-> ALTER TABLE student ADD age INT;   -- नया column जोड़ना
+-> ALTER TABLE student DROP COLUMN age; -- column हटाना
+-> ALTER TABLE student MODIFY email VARCHAR(200); -- column size बदलना
+
+1. नया column जोड़ना
+ALTER TABLE student
+ADD age INT;
+
+
+2.एक से ज्यादा columns जोड़ना
+ALTER TABLE student
+ADD (dob DATE, city VARCHAR(50));
+
+3. Column का datatype बदलना
+ALTER TABLE student
+MODIFY age VARCHAR(3);
+
+4. Column का नाम बदलना (MySQL)
+ALTER TABLE student
+CHANGE age student_age INT;
+
+5. Column delete करना
+ALTER TABLE student
+DROP COLUMN city;
+
+6. Table का नाम बदलना
+ALTER TABLE student
+RENAME TO learners;
+
+8. Foreign Key जोड़ना
+ALTER TABLE orders
+ADD CONSTRAINT fk_student
+FOREIGN KEY (student_id) REFERENCES student(id);
+👉 अब orders.student_id → student.id को refer करेगा।
+
+9. Default value जोड़ना
+ALTER TABLE student
+ALTER city SET DEFAULT 'Unknown';
+अगर city insert करते समय नहीं दी गई तो "Unknown" store होगा।
+
+10. Column को NOT NULL बनाना
+ALTER TABLE student
+MODIFY email VARCHAR(100) NOT NULL;
+अब email null value accept नहीं करेगा।

@@ -1,0 +1,13 @@
+Lab 1: Retrieve all courses
+ 
+SELECT * FROM courses; 
+
+Lab 2: Sort courses by course_duration in descending order 
+
+
+SELECT * FROM courses 
+ORDER BY course_duration DESC;
+
+Lab 3: Limit results to top two courses 
+SELECT * FROM courses 
+LIMIT 2; 

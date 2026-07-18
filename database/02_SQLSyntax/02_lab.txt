@@ -1,0 +1,6 @@
+Lab 2: Retrieve students whose age is greater than 10 
+
+
+SELECT * 
+FROM students 
+WHERE age > 10;

@@ -1,0 +1,4 @@
+Lab 1: Retrieve specific columns (student_name and age) 
+
+SELECT student_name, age 
+FROM students;

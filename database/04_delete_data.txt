@@ -1,0 +1,51 @@
+ 7. Data Delete करना
+DELETE FROM student WHERE id = 1;
+DELETE FROM student WHERE student_id = 5
+
+Basic DELETE Query
+DELETE FROM table_name
+WHERE condition;
+
+Example 1: Single row delete
+DELETE FROM student
+WHERE id = 5;
+
+Example 2: Multiple rows delete
+DELETE FROM student
+WHERE city = 'Delhi';
+
+DELETE FROM student
+WHERE course = "Front-end";
+
+Example 3: Delete with AND / OR condition
+
+DELETE FROM student
+WHERE city = 'Mumbai' AND age < 20;
+
+This row all delete row
+DELETE FROM student
+
+Example 5: Delete using subquery
+DELETE FROM student
+WHERE id IN (SELECT student_id FROM fees WHERE paid = 'No');
+-> यह उन students को delete करेगा जिनका fees टेबल में paid = 'No' है।
+
+
+Example 6: Delete with LIMIT (MySQL में)
+DELETE FROM student
+ORDER BY id
+LIMIT 3;
+
+👉 सबसे पहले 3 rows delete कर देगा।
+
+🔹 Example 7: Foreign Key के साथ (ON DELETE CASCADE)
+
+अगर आपके पास दो tables जुड़े हुए हैं:
+
+CREATE TABLE orders(
+    order_id INT PRIMARY KEY,
+    student_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(id) ON DELETE CASCADE
+);
+
+अब अगर आप student से कोई record delete करेंगे, तो उससे जुड़े orders भी auto-delete हो जाएंगे।

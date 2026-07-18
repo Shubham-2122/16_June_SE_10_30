@@ -1,0 +1,30 @@
+Lab 1: Insert and COMMIT 
+
+START TRANSACTION; 
+
+INSERT INTO courses (course_id, course_name, course_duration) 
+VALUES (104, 'Biology', '4 Months'); 
+COMMIT;
+
+
+Lab 2: Insert and ROLLBACK 
+
+START TRANSACTION; 
+
+INSERT INTO courses (course_id, course_name, course_duration) 
+VALUES (105, 'History', '2 Months'); 
+ROLLBACK;
+
+
+lab 3: Use SAVEPOINT and ROLLBACK to a specific point 
+
+START TRANSACTION; 
+
+UPDATE courses SET course_duration = '6 Months' WHERE course_id = 101; 
+
+SAVEPOINT before_second_update; 
+
+UPDATE courses SET course_duration = '7 Months' WHERE course_id = 102; -- Rollback to the savepoint 
+
+ROLLBACK TO before_second_update; 
+COMMIT;

@@ -1,0 +1,46 @@
+6. Data Update करना
+
+UPDATE student
+SET mobile = '9999999999'
+WHERE id = 1; 
+
+ex
+UPDATE teachers
+SET course_time = 1
+WHERE teacher_id = 3;
+
+2. Multiple Columns Update
+UPDATE student
+SET fname = 'Ravi', email = 'ravi@gmail.com'
+WHERE id = 2;
+ex
+UPDATE student
+set student_name = 'het patel',course = "Front-end"
+WHERE student_id = 6;
+
+4. Update Using Condition
+
+UPDATE student
+SET mobile = '8888888888'
+WHERE fname = 'Shubham';
+
+5. Update Using AND Condition
+UPDATE student
+SET email = 'Rahul@gmail.com'
+WHERE fname = 'Rahul' AND lname = 'Sharma';
+
+6. Update Multiple Rows Together
+UPDATE student
+SET mobile = '7777777777'
+WHERE id IN (2,3,4);
+
+7. Update Using Subquery
+UPDATE student
+SET email = 'topper@gmail.com'
+WHERE id = (SELECT MAX(id) FROM student);
+
+10. Update Using Join (Advanced)
+UPDATE student s
+JOIN orders o ON s.id = o.student_id
+SET s.email = 'order_user@gmail.com'
+WHERE o.order_id = 101;
