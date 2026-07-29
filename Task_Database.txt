@@ -1,0 +1,83 @@
+Step 1: Create the Table
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Gender VARCHAR(10),
+    Course VARCHAR(50),
+    Marks INT
+);
+
+
+Step 2: Insert Sample Data
+INSERT INTO Students (StudentID, Name, Age, Gender, Course, Marks)
+VALUES
+(1, 'Amit', 20, 'Male', 'BCA', 85),
+(2, 'Priya', 21, 'Female', 'BBA', 90),
+(3, 'Rahul', 19, 'Male', 'BCA', 75),
+(4, 'Sneha', 22, 'Female', 'BCom', 88),
+(5, 'Karan', 20, 'Male', 'BBA', 65);
+
+Student Tasks
+1. Display all student records.
+2. Display only student names and courses.
+3. Find students with marks greater than 80
+4. Display students enrolled in the BCA course.
+5. Sort students by marks in descending order.
+6. Count the total number of students.	
+7. Find the average marks. 
+8. Find the highest marks.
+9. Update Rahul's marks to 80.
+10. Delete the student with StudentID = 5.
+
+
+Here are additional SQL JOIN tasks you can give students.
+
+Create Another Table
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(50),
+    FacultyName VARCHAR(50)
+);
+
+Insert Sample Data
+INSERT INTO Courses (CourseID, CourseName, FacultyName)
+VALUES
+(101, 'BCA', 'Mr. Sharma'),
+(102, 'BBA', 'Ms. Patel'),
+(103, 'BCom', 'Mr. Mehta'),
+(104, 'MCA', 'Mrs. Joshi');
+
+
+Update Students Table
+
+Add a CourseID column and assign course IDs.
+
+ALTER TABLE Students
+ADD CourseID INT;
+UPDATE Students SET CourseID = 101 WHERE StudentID = 1;
+UPDATE Students SET CourseID = 102 WHERE StudentID = 2;
+UPDATE Students SET CourseID = 101 WHERE StudentID = 3;
+UPDATE Students SET CourseID = 103 WHERE StudentID = 4;
+UPDATE Students SET CourseID = 102 WHERE StudentID = 5;
+
+JOIN Tasks for Students
+
+1. INNER JOIN
+Display student name, course name, and faculty name.
+
+2. LEFT JOIN
+Display all students with their course details.
+
+3. RIGHT JOIN
+Display all courses, even if no students are enrolled.
+
+4. Find Students in the BCA Course
+
+5. Count Students in Each Course
+
+7. Display Students Scoring More Than 80 Marks
+
+8. Display Faculty and Their Students
+
+
