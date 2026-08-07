@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li::first-letter {
+            background-color: lightcoral;
+        }
+        .main::selection{
+            background-color: lightcoral;
+            color: white;
+            font-family: 'Courier New', Courier, monospace ;
+            
+        }
+
+        ul li::before{
+            content: "s";
+            height: 300px;
+        }
+        ul li::after{
+            content: "sjghg";
+        }
+    </style>
+</head>
+
+<body>
+    <!-- :: psudo element -->
+
+    <ul>
+        <li>Home</li>
+        <li>Home</li>
+        <li>ABout</li>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>Home</li>
+        <li>Help</li>
+    </ul>
+
+    <div class="main">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam illo eligendi a, error repellendus ex libero
+        amet vero eaque sequi nam? Libero quos, veniam accusantium repellendus culpa iure accusamus magnam. Lorem ipsum
+        dolor sit, amet consectetur adipisicing elit. Quaerat ipsam et facere animi quo, perferendis eaque sit fuga?
+        Quaerat ratione quibusdam asperiores, officia a praesentium atque perspiciatis iure molestiae odit. Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Accusantium dolor voluptas incidunt! Totam, pariatur id
+        reprehenderit ut omnis sapiente quas optio dolorum reiciendis error eaque quidem quaerat atque nihil neque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quibusdam labore dolores earum neque illum
+        exercitationem totam eius, officiis inventore alias architecto corporis dolore saepe? Eveniet molestiae
+        dignissimos error vitae!
+    </div>
+</body>
+
+</html>
