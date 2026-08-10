@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color: lightcoral;
+            height: 400px;
+            display: flex;
+            /* flex-direction: row;
+            flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse; */
+            justify-content: center;
+            /* justify-content: start; */
+            /* justify-content: end; */
+            align-items: center;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+        }
+        .main1{
+            height: 400px;
+            background: lightgreen;
+            display: flex;
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #box2{
+            background: aqua;
+            text-align: center;
+            /* line-height: 200px; */
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex and grid -->
+     <!-- flex : 1d : row and col -->
+      <div class="main">
+        <div class="box">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box">3</div>
+      </div>
+      <div class="main1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">3</div>
+      </div>
+</body>
+</html>
