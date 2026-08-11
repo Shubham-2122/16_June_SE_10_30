@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation: xy 1s ease-in-out infinite; */
+            animation: data 5s ease-in-out infinite;
+        }
+        @keyframes xy {
+            from{
+                background-color: aqua;
+                transform: translate(50px);
+            }
+            to{
+                background-color: lightcoral;
+                border-radius: 40px;
+            }
+        }
+        @keyframes data {
+            0%{
+                background: lightcoral;
+            }
+            25%{
+                background: lawngreen;
+                transform: translate(100px);
+            }
+            50%{
+                background: lightseagreen;
+                transform: scale(0.8);
+            }
+            75%{
+                background: linear-gradient(red,green);
+                border-radius:40px ;
+            }
+            100%{
+                background: linear-gradient(red,green,blue,yellow);
+                 transform: translate(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    </div>
+</body>
+</html>
