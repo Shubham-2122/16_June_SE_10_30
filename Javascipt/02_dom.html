@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Dom : doument object model  -->
+
+
+    <!-- internal javascript -->
+
+    <h1 id="demo">demo</h1>
+    <h1 id="test"></h1>
+    
+    <h2>10+10</h2>
+
+    <script>
+        // 1) method console
+
+        console.log("hello javascript")
+        console.log("shubham")
+        console.log(10+10)
+        console.log("mul :",20*5)
+    
+        // 2) doumnet.write
+        document.writeln("Hello javascript")
+        document.write("<br>hello shubham")
+        document.writeln("<h2>hello</h2>")
+        document.writeln("10+10")
+
+        // 3) id innerText = only text allow
+        console.log(document.getElementById("demo"))
+        document.getElementById("demo").innerText = "<i>hello demo file</i>"
+
+        // 4) inner html
+        console.log(document.getElementById("test"))
+        document.getElementById("test").innerHTML = "<i>hello test file</i>"
+
+    </script>
+
+
+</body>
+</html>
