@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input onkeypress="test()" type="text" id="text"> -->
+
+    <input onkeyup="test()" type="text" id="text">
+
+    <textarea name="" rows="10" cols="30" id="show" ></textarea>
+
+    <button onclick="test()">click me</button>
+
+    <script>
+
+        let text_data = document.getElementById("text")
+        let areatext = document.getElementById("show")
+
+
+        function test(){
+            areatext.innerText = text_data.value
+        }
+
+    </script>
+
+</body>
+</html>
