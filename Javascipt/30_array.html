@@ -24,11 +24,26 @@
 
         // console.log(arr[4])
 
-        for(let i=0;i<arr.length;i++){
-            // console.log(i)
-            console.log(arr[i])
+        // for(let i=0;i<arr.length;i++){
+        //     // console.log(i)
+        //     console.log(arr[i])
 
-            document.write(i," = ",arr[i],"<br>")
+        //     document.write(i," = ",arr[i],"<br>")
+        // }
+
+        // 2 ) for of : direct output value
+
+        // for(let test of arr){
+        //     console.log(test)
+        //     document.write(test,"<br>")
+        // }
+
+        // 3) for in : indexs , value
+
+        for(let test in arr){
+            // console.log(test)
+            console.log(arr[test])
+            document.write(test," = ",arr[test],"<br>")
         }
 
     </script>
