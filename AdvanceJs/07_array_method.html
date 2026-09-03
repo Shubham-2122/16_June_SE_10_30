@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- arra method  -->
+
+    <script>
+
+        let arr = [1,2,3,4,5] 
+        console.log(arr.length)
+
+        // push after add karvu
+        arr.push(2)
+        console.log(arr)
+
+        // afeter delete
+        arr.pop()
+        console.log(arr)
+
+        // before add karvo
+        arr.unshift(5)
+        console.log(arr)
+
+        arr.shift()
+        console.log(arr)
+
+        let arr1 = [6,7,8,9,10]
+        // merge
+        console.log(arr.concat(arr1))
+
+        // rvser
+        console.log(arr.reverse())
+
+        // fillter
+
+        const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+        const res = words.filter((test) => test.length <= 5) 
+        console.log(res)
+
+        const pets = ["cat", "dog", "bat"]; 
+
+        console.log(pets.includes('abc'))
+        
+        const elements = ["Fire", "Air", "Water"]; 
+        console.log(elements.join())
+        console.log(elements.join("-"))
+
+
+        const animals = ["ant", "bison", "camel", "duck", "elephant"];
+
+        console.log(animals)
+        console.log(animals.slice(0,3))
+        console.log(animals.slice(2,4))
+
+
+    </script>
+
+</body>
+</html>
