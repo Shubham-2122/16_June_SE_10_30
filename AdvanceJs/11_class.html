@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- class : it' blue print object 
+          : collection of data member and member function  -->
+
+    <script>
+
+        class Bank{
+            // memeber function
+            x = function details(pin,balance){
+
+                // data meber
+                let bankname = "HDFC"
+                let bankIFSC = "HDFC0001"
+                let bankpin = pin 
+                let bankbalance = balance
+
+                console.log("Bank name :",bankname)
+                console.log("Bank IFSC :",bankIFSC)
+                console.log("Bank pin :",bankpin)
+                console.log("Bank balance :",bankbalance)
+            }
+
+            // 
+            y = function deposite(){
+                console.log("Hello deposite function")
+            }
+        }
+
+        // console.log(Bank) 
+
+        let user = new Bank 
+        console.log(user)
+        user.x(123,5000)
+        user.y()
+
+        let prince = new Bank 
+        console.log(prince)
+        prince.y()
+
+    </script>
+
+</body>
+</html>

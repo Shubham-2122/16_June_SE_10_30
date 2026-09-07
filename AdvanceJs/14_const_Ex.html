@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class XY{
+            constructor(a,b){
+                this.a = a 
+                this.b = b
+                console.log("Hello cons")
+            }
+            sum(){
+                console.log(`sum : ${this.a + this.b}`)
+            }
+            sub(){
+                console.log(`sub : ${this.a - this.b}`)
+            }
+            mul(){
+                console.log(`mul : ${this.a * this.b}`)
+            }
+            divi(){
+                console.log(`divi : ${this.a / this.b}`)
+            }
+        }
+
+        let ob = new XY(30,15)
+        ob.sum()
+        ob.mul()
+        ob.sub()
+
+        let data = new XY(10,5)
+        data.sub()
+        data.sub()
+
+    </script>
+
+</body>
+</html>
