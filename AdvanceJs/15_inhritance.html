@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inheritance : one class to anthor  class data pass 
+        
+    1) single 
+    2) multi level 
+    3) multiple : javascrip not possible 
+    4) hyrachical 
+    5) hybrid 
+    -->
+
+    <script>
+
+        // 1) single inhritance
+        class A{
+            demo(){
+                console.log("Class A function")
+            }
+        }
+        class B extends A {
+            demo2(){
+                console.log("Class B Function")
+            }
+        }
+
+        const user = new B()
+        user.demo2()
+        user.demo()
+
+    </script>
+
+</body>
+</html>

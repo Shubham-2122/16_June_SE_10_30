@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // method overloading ( compile time) : there are same class inside multiple function name same but defferent is paramenter
+        // method overriding (runtime errr): there are multiple classs inside multiple function name same
+
+        // class XY{
+        //     test(a){
+        //         console.log("A : ",a)
+        //     }
+        //     test(a,b){
+        //         console.log("Sum :",a+b)
+        //     }
+        //     test(a,b){
+        //         console.log("Sub :",a-b)
+        //     }
+        // }
+
+        // const data = new XY
+        // console.log(data)
+        // data.test(10,5)
+
+        // overrding
+        class A {
+            demo(){
+                console.log("A Class")
+            }
+        }
+        class B extends A {
+            demo(){
+                console.log("B Class")
+            }
+        }
+        class C extends B {
+            demo(){
+                console.log("c Class")
+            }
+        }
+
+        // const data= new C 
+        // data.demo()
+        // data.demo()
+
+        const test = [new A,new B,new C]
+        console.log(test)
+        
+        test.map((data)=>{
+            data.demo()
+        })
+
+    </script>
+</body>
+</html>

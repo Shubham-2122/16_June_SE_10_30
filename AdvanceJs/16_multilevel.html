@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+  // 1) multi level inhritance
+        class A{
+            demo(){
+                console.log("Class A function")
+            }
+        }
+        class B extends A {
+            demo2(){
+                console.log("Class B Function")
+            }
+        }
+        class C extends B{
+            test(){
+                console.log("Class C function")
+            }
+        }
+        const user = new C
+        user.demo2()
+        user.demo()
+        user.test()
+
+    </script>
+
+</body>
+</html>
