@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let data = {
+            details : function shoe(city,state){
+                console.log("fname :",this.fname , " lname : ",this.lname, " city :",city, " state :",state)
+            }
+        }
+
+        let person = {
+            fname : "rohan",
+            lname : "patel"
+        }
+
+        data.details.call(person,"surat","gujarat")
+        // spare argument
+
+        let person1 = {
+             fname : "jay",
+            lname : "patel"
+        }
+
+        data.details.apply(person1,["rajkot","gujarat"])
+        // as array passing value
+
+    </script>
+
+</body>
+</html>
