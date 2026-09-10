@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- fetch() : 
+        get : all view
+        post : new data
+        delete : single delete
+        put / patch  : update 
+
+        back data : handle kare 
+    -->
+
+    <!-- javascript text ya json nathi 
+        js : object /array /string
+    -->
+    
+    <script>
+
+        // fetch()
+
+        fetch("demo.txt",{
+            method:"GET"
+        })
+        .then((res)=>{
+            // text file data convert string
+            // console.log(res.text())
+            return res.text()
+        })
+        .then((test)=>{
+            console.log(test)
+            document.write(test)
+        })
+        .catch((err)=>{
+            console.log("erer",err)
+        })
+
+    </script>
+
+</body>
+</html>

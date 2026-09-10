@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- json : javascript syntax object notation
+    
+    let json = `[
+        {   
+            "id" : 1
+            "name" :"het",
+            "course":"front-end"
+        }
+    ]`
+
+    let ob = [
+    {
+        id : 1,
+        name : "het",
+        course : "front-end"    
+    }
+    ]
+    
+    -->
+
+    <script>
+
+        // json string data
+
+        let json = `[
+            {
+                "id":1,
+                "name":"het",
+                "course":"front-end"
+            },
+            {
+                "id":2,
+                "name":"nirav",
+                "course":"back-end"
+            },
+            {
+                "id":3,
+                "name":"jatin",
+                "course":"full-stackw"
+            }
+        ]`
+        // console.log(json)
+
+        let ob = JSON.parse(json)
+        console.log(ob)
+
+        for (let data of ob){
+            console.log(data)
+            document.write(`<h5>id : ${data.id} name : ${data.name} coruse : ${data.course}</h5>`)
+        }
+
+        let object = [
+            {
+                id : 1,
+                name : "sujal",
+                coruse : "back-end",
+                age : 23
+            },
+            {
+                id : 2,
+                name : "ketan",
+                coruse : "front-end",
+                age : 27
+            },
+            {
+                id : 3,
+                name : "vraj",
+                coruse : "full-stack",
+                age : 26
+            }
+        ]
+
+        console.log(object)
+        let jsondata = JSON.stringify(object)
+        console.log(jsondata)
+    </script>
+</body>
+</html>

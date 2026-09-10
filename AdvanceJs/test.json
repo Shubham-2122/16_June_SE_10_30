@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "rohan",
+            "age": 23,
+            "course": "front-end"
+        },
+        {
+            "id": 2,
+            "name": "divya",
+            "age": 26,
+            "course": "back-end"
+        },
+        {
+            "id": 3,
+            "name": "heni",
+            "age": 25,
+            "course": "MERN-STACk"
+        }
+    ],
+    "admin":[
+        {
+            "id": 1,
+            "name": "admin",
+            "age": 23
+        },
+        {
+            "id": 2,
+            "name": "subadmin",
+            "age": 26
+        }
+    ]
+}
