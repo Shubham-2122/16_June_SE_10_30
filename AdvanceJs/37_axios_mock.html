@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+<body>
+    
+    <script>
+
+        const getuser=async()=>{
+            try {
+                const res = await axios.get("https://6aa4ecea1397053d42bb1e33.mockapi.io/users")
+                console.log(res.data)
+            } catch (error) {
+                console.log("Api not",error)
+            }
+        }
+        getuser()
+
+    </script>
+
+</body>
+</html>
