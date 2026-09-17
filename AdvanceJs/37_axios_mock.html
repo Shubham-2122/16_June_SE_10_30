@@ -19,7 +19,54 @@
                 console.log("Api not",error)
             }
         }
-        getuser()
+        // getuser()
+
+        let person = {
+            name:"het",
+            surname:"patel",
+            email:"het@gmail.com"
+        }
+
+        const createuser=async()=>{
+            try {
+                const res = await axios.post(`https://6aa4ecea1397053d42bb1e33.mockapi.io/users`,person)
+                console.log(res.data)
+            } catch (error) {
+                console.log("Api not",error)
+            }
+        }
+        // createuser()
+
+        const deleteUser = async(id)=>{
+            try {
+                const res = await axios.delete(`https://6aa4ecea1397053d42bb1e33.mockapi.io/users/${id}`)
+                console.log(res.data)
+                
+            } catch (error) {
+                console.log("Api not",error)
+            }
+        }
+        // deleteUser(5)
+
+        let person1 = {
+            id : 4,
+            name :"nishat",
+            surname :"jadav",
+            email:"nishat@gmail.com",
+            city:"surats"
+        }
+
+            // update user
+        const updateUser =async()=>{
+            try {
+                const res = await axios.put(`https://6aa4ecea1397053d42bb1e33.mockapi.io/users/${person1.id}`,person1)
+                console.log(res.data)
+            } catch (error) {
+                console.log("Api not",error)
+            }
+        }
+
+        updateUser()
 
     </script>
 
