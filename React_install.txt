@@ -1,0 +1,40 @@
+React : javascript lib 
+
+React : vitrual dom, real dom 
+      : Component base 
+      : without refreshh next page 
+      : React reuse,redux component 
+
+React : node : clinet server 
+ 
+Node : javascript runtime enivroment 
+Npm : node package manager
+
+Node install step 
+
+1) cmd : node -v
+2) cmd : npm -v
+
+React app install : 
+Npm vs Npx 
+npm : global app 
+npx : node package extesible
+
+1) cmd : npm create vite@latest my-react-app /your app 
+2) cmd : npm install 
+3) cmd : npm run dev
+
+Floder stru :Flow react 
+1) node_module : npm install 
+2) public : static : img,index.html
+3) src : main.jsx , App.jsx 
+
+flow :index.html -> main.jsx -> App.jsx 
+work : App.jsx -> main.jsx -> index.html
+
+4) pack-lock.json -> 
+
+
+
+
+
