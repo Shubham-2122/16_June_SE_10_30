@@ -1,13 +1,19 @@
 import React from "react";
-import ClassCompo from "./Component/ClassCompo";
-import FunCompo from "./Component/FunCompo";
+import MainProps from "./Props/MainProps";
+// import Demo from "./Css/Demo";
+// import ClassCompo from "./Component/ClassCompo";
+// import FunCompo from "./Component/FunCompo";
+// import Hello from "./JSX/Hello";
 
 function App(){
     return(
         <div>
             <h1>hello this app data</h1>
-            <ClassCompo />
-            <FunCompo />
+            {/* <ClassCompo />
+            <FunCompo /> */}
+            {/* <Hello /> */}
+            {/* <Demo /> */}
+            <MainProps/>
         </div>
     )
 }

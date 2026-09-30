@@ -32,7 +32,8 @@ Floder stru :Flow react
 flow :index.html -> main.jsx -> App.jsx 
 work : App.jsx -> main.jsx -> index.html
 
-4) pack-lock.json -> 
+4) pack-lock.json,package.josn -> 
+5) .gitingore
 
 
 
