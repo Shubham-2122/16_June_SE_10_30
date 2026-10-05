@@ -1,6 +1,7 @@
 import React from "react";
 // import MainProps from "./Props/MainProps";
 import MainState from "./State/MainState";
+import Effectdata from "./Useffects/Effectdata";
 // import Demo from "./Css/Demo";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
@@ -13,9 +14,17 @@ function App(){
             {/* <ClassCompo />
             <FunCompo /> */}
             {/* <Hello /> */}
+            
             {/* <Demo /> */}
+            
+            {/* props data */}
             {/* <MainProps/> */}
-            <MainState />
+            
+            {/* state data */}
+            {/* <MainState /> */}
+
+            {/* useffect  */}
+            <Effectdata />
         </div>
     )
 }

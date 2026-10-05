@@ -18,6 +18,10 @@ function FunState() {
 
     console.log(name)
 
+    const inrecement=()=>{
+        setcount(count+2)
+    }
+
     return (
         <div>
             <h1>Hello function State</h1>
@@ -27,6 +31,7 @@ function FunState() {
 
             <h1>Counter : {count}</h1>
             <button onClick={() => setcount(count + 1)}>Increment</button>
+            <button onClick={inrecement}>Increment by 2</button>
             <button onClick={() => setcount(count - 1)}>Decrement</button>
             <button onClick={() => setcount(0)}>Reset</button>
 
