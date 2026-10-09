@@ -1,11 +1,13 @@
 import React from "react";
+import FormData from "./Formhadling/FormData";
+import FormObje from "./Formhadling/FormObje";
 // import MainProps from "./Props/MainProps";
 // import MainState from "./State/MainState";
 // import Effectdata from "./Useffects/Effectdata";
 // import UserData from "./Useffects/UserData";
 // import UserTest from "./Useffects/UserTest";
 // import ProductData from "./Useffects/ProductData";
-import MainContext from "./Context/MainContext";
+// import MainContext from "./Context/MainContext";
 // import Demo from "./Css/Demo";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
@@ -32,7 +34,10 @@ function App(){
             {/* <UserData /> */}
             {/* <UserTest /> */}
             {/* <ProductData /> */}
-            <MainContext />
+            {/* <MainContext /> */}
+
+            {/* <FormData /> */}
+            <FormObje />
         </div>
     )
 }
