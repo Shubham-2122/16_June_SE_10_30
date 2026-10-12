@@ -1,6 +1,10 @@
 import React from "react";
 import FormData from "./Formhadling/FormData";
 import FormObje from "./Formhadling/FormObje";
+import Boot from "./bootstradata/Boot";
+import BootCompo from "./bootstradata/BootCompo";
+import Footerd from "./bootstradata/Footerd";
+import Logindata from "./bootstradata/Logindata";
 // import MainProps from "./Props/MainProps";
 // import MainState from "./State/MainState";
 // import Effectdata from "./Useffects/Effectdata";
@@ -37,7 +41,12 @@ function App(){
             {/* <MainContext /> */}
 
             {/* <FormData /> */}
-            <FormObje />
+            {/* <FormObje /> */}
+
+            {/* <Boot /> */}
+            <BootCompo />
+            <Logindata />
+            <Footerd />
         </div>
     )
 }
