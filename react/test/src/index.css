@@ -1,1 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
 @import "tailwindcss";
+
+
+/* custom  */
+/* tag direct apply  */
+@layer base {
+    h1 {
+        font-size: clamp(20px, 5.6vw, 50px);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+}
+
+/* /design  use */
+@layer components {
+    .card {
+        height: 300px;
+        width: 200px;
+        border: 2px solid;
+        transition: .5s;
+    }
+
+    .card:hover {
+        background-color: lightcoral;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        background: lightblue;
+    }
+
+    .btn1 {
+        padding: 10px 20px;
+        background: lightgreen;
+    }
+}
+
+/* resuse */
+@layer utilities {
+    .font {
+        font-size: clamp(20px, 7.6vw, 70px);
+    }
+
+    .font1 {
+        font-size: clamp(20px, 5.6vw, 50px);
+    }
+
+    .family {
+        font-family: "Edu QLD Hand", cursive;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+}

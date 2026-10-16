@@ -5,6 +5,8 @@ import Space from './Test/Space'
 import Borderdata from './Test/Borderdata'
 import Demo from './Test/Demo'
 import Flexdata from './Test/Flexdata'
+import Testdata from './Test/Testdata'
+import Carddemo from './Test/Carddemo'
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
      {/* <Space /> */}
      {/* <Borderdata /> */}
      {/* <Demo /> */}
-     <Flexdata />
+     {/* <Flexdata /> */}
+     {/* <Testdata /> */}
+     <Carddemo />
     </div>
   )
 }

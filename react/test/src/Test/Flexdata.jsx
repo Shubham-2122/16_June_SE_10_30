@@ -30,6 +30,14 @@ function Flexdata() {
             <div className="size-52 border-2">
             <img src="https://cdn.pixabay.com/photo/2019/10/29/14/46/landscape-4587079_1280.jpg" style={{width:"100%",height:"100%"}} alt="" />
             </div>
+            <div className="size-52 border-2 hover:bg-amber-300 hover:text-5xl">1</div>
+            <div className="size-52 border-2 bg-[rgb(163,121,30)] text-[43px]">1</div>
+            <div className="size-52 border-2">1</div>
+            <div className="size-52 border-2">1</div>
+            <div className="size-52 border-2">1</div>
+            <div className="size-52 border-2">1</div>
+            <div className="size-52 border-2">1</div>
+            <div className="size-52 border-2">1</div>
             <div className="size-52 border-2">1</div>
 
 
