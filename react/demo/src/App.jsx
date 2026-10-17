@@ -1,10 +1,15 @@
 import React from "react";
-import FormData from "./Formhadling/FormData";
-import FormObje from "./Formhadling/FormObje";
-import Boot from "./bootstradata/Boot";
-import BootCompo from "./bootstradata/BootCompo";
-import Footerd from "./bootstradata/Footerd";
-import Logindata from "./bootstradata/Logindata";
+import Home from "./layout/pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./layout/pages/About";
+import Contact from "./layout/pages/Contact";
+import NotFound from "./layout/pages/NotFound";
+// import FormData from "./Formhadling/FormData";
+// import FormObje from "./Formhadling/FormObje";
+// import Boot from "./bootstradata/Boot";
+// import BootCompo from "./bootstradata/BootCompo";
+// import Footerd from "./bootstradata/Footerd";
+// import Logindata from "./bootstradata/Logindata";
 // import MainProps from "./Props/MainProps";
 // import MainState from "./State/MainState";
 // import Effectdata from "./Useffects/Effectdata";
@@ -19,8 +24,9 @@ import Logindata from "./bootstradata/Logindata";
 
 function App(){
     return(
+        <BrowserRouter>
         <div>
-            <h1>hello this app data</h1>
+            {/* <h1>hello this app data</h1> */}
             {/* <ClassCompo />
             <FunCompo /> */}
             {/* <Hello /> */}
@@ -44,10 +50,22 @@ function App(){
             {/* <FormObje /> */}
 
             {/* <Boot /> */}
-            <BootCompo />
+            {/* <BootCompo />
             <Logindata />
-            <Footerd />
+            <Footerd /> */}
+
+            {/* layout */}
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+
+                {/* not foun universal */}
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+
         </div>
+        </BrowserRouter>
     )
 }
 
