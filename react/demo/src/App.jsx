@@ -7,6 +7,8 @@ import NotFound from "./layout/pages/NotFound";
 import About1 from "./layout/pages/About1";
 import About2 from "./layout/pages/About2";
 import UseTest from "./Hooks/UseTest";
+import RedData from "./Hooks/RedData";
+import Test1 from "./Hooks/Test1";
 // import FormData from "./Formhadling/FormData";
 // import FormObje from "./Formhadling/FormObje";
 // import Boot from "./bootstradata/Boot";
@@ -66,6 +68,8 @@ function App(){
                 </Route>
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/ref" element={<UseTest />} />
+                <Route path="/red" element={<RedData />} />
+                <Route path="/test" element={<Test1 />} />
 
                 {/* not foun universal */}
                 <Route path="*" element={<NotFound />} />

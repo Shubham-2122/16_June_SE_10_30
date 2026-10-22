@@ -4,6 +4,7 @@
 
 import React, { useRef } from 'react'
 import Headers from '../layout/Comana/Headers'
+import useApi from './useApi'
 
 function UseTest() {
 
@@ -18,6 +19,10 @@ function UseTest() {
         refelement.current.style.background = "red";
         refelement.current.style.color = "white"
     }
+
+    const {data} = useApi("https://dummyjson.com/products")
+
+    console.log(data.products)
 
   return (
     <div>
