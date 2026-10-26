@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Coman/Header'
 import Anav from '../Coman/Anav'
 import Footer from '../Coman/Footer'
+import axios from 'axios'
 
 function Events() {
+
+    const [event, setevent] = useState([])
+
+    useEffect(() => {
+        fetchdata()
+    }, [])
+
+    const fetchdata = async () => {
+        const res = await axios.get("http://localhost:3000/events")
+        console.log(res.data)
+        setevent(res.data)
+    }
+
     return (
         <div>
             <Header />
@@ -49,78 +63,23 @@ function Events() {
                                     <div className="row g-4">
                                         <div className="col-lg-12">
                                             <div className="row g-4">
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-1.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Wedding</h4>
-                                                            <a href="img/event-1.jpg" data-lightbox="event-1" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-2.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Corporate</h4>
-                                                            <a href="img/event-2.jpg" data-lightbox="event-2" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-3.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Wedding</h4>
-                                                            <a href="img/event-3.jpg" data-lightbox="event-3" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-4.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Buffet</h4>
-                                                            <a href="img/event-4.jpg" data-lightbox="event-4" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-5.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Cocktail</h4>
-                                                            <a href="img/event-5.jpg" data-lightbox="event-5" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-6.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Wedding</h4>
-                                                            <a href="img/event-6.jpg" data-lightbox="event-6" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-7.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Buffet</h4>
-                                                            <a href="img/event-7.jpg" data-lightbox="event-7" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
-                                                    <div className="event-img position-relative">
-                                                        <img className="img-fluid rounded w-100" src="img/event-8.jpg" alt />
-                                                        <div className="event-overlay d-flex flex-column p-4">
-                                                            <h4 className="me-auto">Corporate</h4>
-                                                            <a href="img/event-8.jpg" data-lightbox="event-17" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                {
+                                                    event && event.map((data) => {
+                                                        console.log(data)
+                                                        return (
+                                                            <div className="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                                                <div className="event-img position-relative">
+                                                                    <img className="img-fluid rounded w-100" src={data.img} style={{width:"300px",height:"250px"}} alt />
+                                                                    <div className="event-overlay d-flex flex-column p-4">
+                                                                        <h4 className="me-auto">{data.name}</h4>
+                                                                        <a href="img/event-1.jpg" data-lightbox="event-1" className="my-auto"><i className="fas fa-search-plus text-dark fa-2x" /></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        )
+                                                    })
+                                                }
+
                                             </div>
                                         </div>
                                     </div>

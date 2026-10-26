@@ -11,6 +11,8 @@ import Team from './Wesbite/Pages/Team'
 import Test from './Wesbite/Pages/Test'
 import Contact from './Wesbite/Pages/Contact'
 import NotFound from './Wesbite/Pages/NotFound'
+import Dashboard from './Admin/Apages/Dashboard'
+import EventsManage from './Admin/Apages/EventsManage'
 
 function App() {
   return (
@@ -29,6 +31,10 @@ function App() {
         <Route path='/contact' element={<Contact />} />
 
         <Route path='*' element={<NotFound />} />
+
+        {/* admin */}
+        <Route path='/dash' element={<Dashboard />} />
+        <Route path='/eventmange' element={<EventsManage />} />
 
       </Routes>
     </BrowserRouter>
