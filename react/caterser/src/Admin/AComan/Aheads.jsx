@@ -17,8 +17,14 @@ function Aheads() {
                             </button>
                             <div className="collapse navbar-collapse" id="navbarCollapse">
                                 <div className="navbar-nav mx-auto">
-                                   
-                                    <NavLink to="/eventmange" className="nav-item nav-link">Events</NavLink>
+                            
+                                    <div className="nav-item dropdown">
+                                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
+                                        <div className="dropdown-menu bg-light">
+                                            <NavLink to="/eventmange" className="dropdown-item">manage</NavLink>
+                                            <NavLink to="/eventadd" className="dropdown-item">Events add</NavLink>
+                                        </div>
+                                    </div>
                                     <NavLink to="/menu" className="nav-item nav-link">Menu</NavLink>
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
