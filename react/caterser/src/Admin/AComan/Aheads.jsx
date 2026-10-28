@@ -19,7 +19,7 @@ function Aheads() {
                                 <div className="navbar-nav mx-auto">
                             
                                     <div className="nav-item dropdown">
-                                        <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
+                                        <a  className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Events</a>
                                         <div className="dropdown-menu bg-light">
                                             <NavLink to="/eventmange" className="dropdown-item">manage</NavLink>
                                             <NavLink to="/eventadd" className="dropdown-item">Events add</NavLink>
@@ -38,7 +38,7 @@ function Aheads() {
                                     <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
                                 </div>
                                 <button className="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search" /></button>
-                                <a href className="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+                                <a  className="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
                             </div>
                         </nav>
                     </div>
