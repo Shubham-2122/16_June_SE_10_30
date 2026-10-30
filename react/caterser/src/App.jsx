@@ -1,4 +1,5 @@
 import React from 'react'
+import { Slide, ToastContainer, toast } from 'react-toastify';
 import Home from './Wesbite/Pages/Home'
 import About from './Wesbite/Pages/About'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -15,9 +16,24 @@ import Dashboard from './Admin/Apages/Dashboard'
 import EventsManage from './Admin/Apages/EventsManage'
 import EventsAdd from './Admin/Apages/EventsAdd'
 
+
 function App() {
   return (
     <BrowserRouter>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Slide}
+      />
       <Routes>
         {/* wesbite */}
         <Route path='/' element={<Home />} />

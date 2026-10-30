@@ -35,14 +35,14 @@
       "img": "https://mywhitesandwedding.com/wp-content/uploads/2022/06/Bride-and-groom-celebrate-wedding-with-their-guest-during-evening-in-the-reception-ss220623-1024x597.jpg"
     },
     {
-      "id": "3",
-      "name": "Corporate",
-      "img": "https://tse3.mm.bing.net/th/id/OIP.Dx6Gx-V1rIf6_rFttsZj9AHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-    },
-    {
       "id": "yAzVkBJgA_A",
       "name": "Cocktail",
       "img": "https://img.magnific.com/free-photo/close-up-cocktail-glass_23-2151596010.jpg"
+    },
+    {
+      "id": "lg9SBKXg4_U",
+      "name": "Corporate",
+      "img": "https://static.vecteezy.com/system/resources/thumbnails/046/517/606/small_2x/diverse-colleagues-dinner-meeting-lunch-in-office-restaurant-businessmen-group-cafeteria-cafe-discussion-business-fine-dining-corporate-teamwork-expensive-tasty-dish-food-coworkers-photo.jpg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

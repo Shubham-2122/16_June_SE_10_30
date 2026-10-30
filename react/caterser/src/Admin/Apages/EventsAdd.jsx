@@ -3,6 +3,7 @@ import Aheros from '../AComan/Aheros'
 import Aheads from '../AComan/Aheads'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function EventsAdd() {
 
@@ -28,6 +29,7 @@ function EventsAdd() {
 
         if(form.img == "" || form.name == ""){
             console.log("pls data field first")
+            toast.error("Pls data field First")
             return false
         }
 
@@ -35,6 +37,7 @@ function EventsAdd() {
             const res = await axios.post("http://localhost:3000/events",form)
             console.log(res.data)
             console.log("Succesfull data add")
+            toast.success("Successfully data add")
             redirect("/eventmange")
         } catch (error) {
             console.log("Api not Found",error)
