@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 function Aheads() {
+
+    
   return (
     <div>
         <div>
@@ -25,7 +27,14 @@ function Aheads() {
                                             <NavLink to="/eventadd" className="dropdown-item">Events add</NavLink>
                                         </div>
                                     </div>
-                                    <NavLink to="/menu" className="nav-item nav-link">Menu</NavLink>
+                                     <div className="nav-item dropdown">
+                                        <a  className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Menu</a>
+                                        <div className="dropdown-menu bg-light">
+                                            <NavLink to="/menumanage" className="dropdown-item">manage</NavLink>
+                                            {/* <NavLink to="/eventadd" className="dropdown-item">Events add</NavLink> */}
+                                        </div>
+                                    </div>
+                                    
                                     <div className="nav-item dropdown">
                                         <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                         <div className="dropdown-menu bg-light">

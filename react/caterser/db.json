@@ -45,5 +45,47 @@
       "img": "https://static.vecteezy.com/system/resources/thumbnails/046/517/606/small_2x/diverse-colleagues-dinner-meeting-lunch-in-office-restaurant-businessmen-group-cafeteria-cafe-discussion-business-fine-dining-corporate-teamwork-expensive-tasty-dish-food-coworkers-photo.jpg"
     }
   ],
+  "menus":[
+    {
+      "id":"1",
+      "name":"Paneer",
+      "price":"23",
+      "desc":"asdhakusdhaskudh",
+      "type":"starter",
+      "img":"https://b.zmtcdn.com/data/dish_photos/59c/6e042c25b39f457925f054e3e556b59c.jpg?output-format=webp"
+    },
+     {
+      "id":"2",
+      "name":"Pizza",
+      "price":"30",
+      "desc":"asdhakusd dsfh askudh",
+      "type":"starter",
+      "img":"https://b.zmtcdn.com/data/dish_photos/086/2b86c1e8fb771f76309c4c10926be086.jpg?output-format=webp"
+    },
+     {
+      "id":"3",
+      "name":"gujarati",
+      "price":"26",
+      "desc":"asdhakusd dsfh askudh",
+      "type":"Maincourse",
+      "img":"https://b.zmtcdn.com/data/pictures/8/112168/8a88d6d3ef872def159472a1df5f2282.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+      "id":"4",
+      "name":"South Indian",
+      "price":"45",
+      "desc":"asdhakusd dsfh askudh",
+      "type":"Maincourse",
+      "img":"https://b.zmtcdn.com/data/pictures/9/20817279/0b7472e3adce84c594f654d6ed0d21db.jpeg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+     {
+      "id":"5",
+      "name":"Cock",
+      "price":"15",
+      "desc":"asdhakusd dsfh askudh",
+      "type":"drinks",
+      "img":"https://b.zmtcdn.com/data/pictures/5/18924015/eabd8c8818998e6553f30490ce600a33_featured_v2.jpg?output-format=webp"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

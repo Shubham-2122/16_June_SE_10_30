@@ -15,6 +15,7 @@ import NotFound from './Wesbite/Pages/NotFound'
 import Dashboard from './Admin/Apages/Dashboard'
 import EventsManage from './Admin/Apages/EventsManage'
 import EventsAdd from './Admin/Apages/EventsAdd'
+import MenuManage from './Admin/Apages/MenuManage';
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
         <Route path='/dash' element={<Dashboard />} />
         <Route path='/eventmange' element={<EventsManage />} />
         <Route path='/eventadd' element={<EventsAdd />} />
+         <Route path='/menumanage' element={<MenuManage />} />
 
       </Routes>
     </BrowserRouter>

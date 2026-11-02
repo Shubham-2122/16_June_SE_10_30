@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../Coman/Header'
 import Anav from '../Coman/Anav'
 import Footer from '../Coman/Footer'
+import useApi from '../../Customdata/useApi'
 
 function Menus() {
+
+    const { data, setdata, fetchdata } = useApi("http://localhost:3000/menus?type=starter")
+    
+    useEffect(() => {
+        fetchdata()
+    }, [])
+
+
+
     return (
         <div>
 
@@ -48,102 +58,25 @@ function Menus() {
                         <div className="tab-content">
                             <div id="tab-6" className="tab-pane fade show p-0 active">
                                 <div className="row g-4">
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-01.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Paneer</h4>
-                                                    <h4 className="text-primary">$90</h4>
+                                    {
+                                        data && data.map((test) => {
+                                            return (
+                                                <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
+                                                    <div className="menu-item d-flex align-items-center">
+                                                        <img className="flex-shrink-0 img-fluid rounded-circle" src={test.img} style={{ height: "100px", width: "100px" }} alt />
+                                                        <div className="w-100 d-flex flex-column text-start ps-4">
+                                                            <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
+                                                                <h4>{test.name}</h4>
+                                                                <h4 className="text-primary">${test.price}</h4>
+                                                            </div>
+                                                            <p className="mb-0">{test.desc}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.2s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-02.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Sweet Potato</h4>
-                                                    <h4 className="text-primary">$90</h4>
-                                                </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.3s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-03.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Sabudana Tikki</h4>
-                                                    <h4 className="text-primary">$90</h4>
-                                                </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.4s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-04.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Pizza</h4>
-                                                    <h4 className="text-primary">$90</h4>
-                                                </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.5s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-05.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Bacon</h4>
-                                                    <h4 className="text-primary">$90</h4>
-                                                </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.6s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-06.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Chicken</h4>
-                                                    <h4 className="text-primary">$90</h4>
-                                                </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.7s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-07.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Blooming</h4>
-                                                    <h4 className="text-primary">$90</h4>
-                                                </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-6 wow bounceInUp" data-wow-delay="0.8s">
-                                        <div className="menu-item d-flex align-items-center">
-                                            <img className="flex-shrink-0 img-fluid rounded-circle" src="img/menu-08.jpg" alt />
-                                            <div className="w-100 d-flex flex-column text-start ps-4">
-                                                <div className="d-flex justify-content-between border-bottom border-primary pb-2 mb-2">
-                                                    <h4>Sweet</h4>
-                                                    <h4 className="text-primary">$90</h4>
-                                                </div>
-                                                <p className="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt ut labore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                            )
+                                        })
+                                    }
+
                                 </div>
                             </div>
                             <div id="tab-7" className="tab-pane fade show p-0">
