@@ -16,6 +16,7 @@ import Dashboard from './Admin/Apages/Dashboard'
 import EventsManage from './Admin/Apages/EventsManage'
 import EventsAdd from './Admin/Apages/EventsAdd'
 import MenuManage from './Admin/Apages/MenuManage';
+import Alogin from './Admin/Apages/Alogin';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Route path='/eventmange' element={<EventsManage />} />
         <Route path='/eventadd' element={<EventsAdd />} />
          <Route path='/menumanage' element={<MenuManage />} />
+           <Route path='/alogin' element={<Alogin />} />
 
       </Routes>
     </BrowserRouter>
