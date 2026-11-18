@@ -1,7 +1,24 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function Header() {
+
+     const redirect = useNavigate()
+
+    useEffect(()=>{
+        if(!localStorage.getItem("Uid")){
+            redirect("/login")
+        }
+    })
+
+    const Alogout =()=>{
+        localStorage.removeItem("Uid")
+        localStorage.removeItem("Uname")
+        redirect("/login")
+        toast.success("User logout Success")
+    }
+
     return (
         <div>
             <div>
@@ -33,8 +50,30 @@ function Header() {
                                     </div>
                                     <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
                                 </div>
-                                <button className="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search" /></button>
-                                <a href className="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+                             
+                                 {
+                                (()=>{
+                                    if(localStorage.getItem("Uid")){
+                                        return(
+                                            <>
+                                                 <a  className="btn btn-primary py-2 px-4 d-none d-xl-inline-block">hello {localStorage.getItem("Uname")}</a>
+                                            </>
+                                        )
+                                    }
+                                })()
+                               }
+                               
+                               {
+                                (()=>{
+                                    if(localStorage.getItem("Uid")){
+                                        return(
+                                            <>
+                                                 <Link onClick={Alogout} className="btn btn-primary mx-2 py-2 px-4 d-none d-xl-inline-block">Logout</Link>
+                                            </>
+                                        )
+                                    }
+                                })()
+                               }
                             </div>
                         </nav>
                     </div>

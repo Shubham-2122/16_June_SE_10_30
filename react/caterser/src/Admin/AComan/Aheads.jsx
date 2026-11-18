@@ -1,8 +1,23 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 function Aheads() {
 
+    const redirect = useNavigate()
+
+    useEffect(()=>{
+        if(!localStorage.getItem("Aid")){
+            redirect("/alogin")
+        }
+    })
+
+    const Alogout =()=>{
+        localStorage.removeItem("Aid")
+        localStorage.removeItem("Aname")
+        redirect("/alogin")
+        toast.success("Admin logout Success")
+    }
     
   return (
     <div>
@@ -46,8 +61,29 @@ function Aheads() {
                                     </div>
                                     <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
                                 </div>
-                                <button className="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search" /></button>
-                                <a  className="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</a>
+                               {
+                                (()=>{
+                                    if(localStorage.getItem("Aid")){
+                                        return(
+                                            <>
+                                                 <a  className="btn btn-primary py-2 px-4 d-none d-xl-inline-block">hello {localStorage.getItem("Aname")}</a>
+                                            </>
+                                        )
+                                    }
+                                })()
+                               }
+                               
+                               {
+                                (()=>{
+                                    if(localStorage.getItem("Aid")){
+                                        return(
+                                            <>
+                                                 <Link onClick={Alogout} className="btn btn-primary mx-2 py-2 px-4 d-none d-xl-inline-block">ALogout</Link>
+                                            </>
+                                        )
+                                    }
+                                })()
+                               }
                             </div>
                         </nav>
                     </div>

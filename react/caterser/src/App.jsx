@@ -17,6 +17,8 @@ import EventsManage from './Admin/Apages/EventsManage'
 import EventsAdd from './Admin/Apages/EventsAdd'
 import MenuManage from './Admin/Apages/MenuManage';
 import Alogin from './Admin/Apages/Alogin';
+import Login from './Wesbite/Pages/Login';
+import Register from './Wesbite/Pages/Register';
 
 
 function App() {
@@ -48,6 +50,8 @@ function App() {
         <Route path='/team' element={<Team />} />
         <Route path='/test' element={<Test />} />
         <Route path='/contact' element={<Contact />} />
+         <Route path='/login' element={<Login />} />
+    <Route path='/new' element={<Register />} />
 
         <Route path='*' element={<NotFound />} />
 
