@@ -19,6 +19,7 @@ import MenuManage from './Admin/Apages/MenuManage';
 import Alogin from './Admin/Apages/Alogin';
 import Login from './Wesbite/Pages/Login';
 import Register from './Wesbite/Pages/Register';
+import EditProfile from './Wesbite/Pages/EditProfile';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
          <Route path='/login' element={<Login />} />
     <Route path='/new' element={<Register />} />
+     <Route path='/edit' element={<EditProfile />} />
 
         <Route path='*' element={<NotFound />} />
 

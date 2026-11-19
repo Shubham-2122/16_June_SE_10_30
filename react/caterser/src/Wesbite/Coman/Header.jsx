@@ -56,7 +56,7 @@ function Header() {
                                     if(localStorage.getItem("Uid")){
                                         return(
                                             <>
-                                                 <a  className="btn btn-primary py-2 px-4 d-none d-xl-inline-block">hello {localStorage.getItem("Uname")}</a>
+                                                 <Link  to="/edit" className="btn btn-primary py-2 px-4 d-none d-xl-inline-block">hello {localStorage.getItem("Uname")}</Link>
                                             </>
                                         )
                                     }
