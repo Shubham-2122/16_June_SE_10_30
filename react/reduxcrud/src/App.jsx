@@ -1,9 +1,15 @@
 import React from 'react'
+import UserData from './Pages/UserData'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <div>
-      <h1>hello Redux crud</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<UserData />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
