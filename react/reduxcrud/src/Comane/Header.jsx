@@ -15,6 +15,12 @@ function Header() {
                             <li className="nav-item">
                                 <NavLink className="nav-link " aria-current="page" to="/" >User details</NavLink>
                             </li>
+                             <li className="nav-item">
+                                <NavLink className="nav-link " aria-current="page" to="/adduser" >User add</NavLink>
+                            </li>
+                               <li className="nav-item">
+                                <NavLink className="nav-link " aria-current="page" to="/admin" >Admin Mange</NavLink>
+                            </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Link</a>
                             </li>

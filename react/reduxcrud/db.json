@@ -1,18 +1,47 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name":"user",
-            "email":"user@gmail.com",
-            "password":"1234",
-            "phone":"4354365"
-        },
-        {
-            "id":2,
-            "name":"jay",
-            "email":"jay@gmail.com",
-            "password":"123456",
-            "phone":"4354365"
-        }
-    ]
+  "users": [
+    {
+      "id": "1",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "1234",
+      "phone": "4354365"
+    },
+    {
+      "id": "2",
+      "name": "jay",
+      "email": "jay@gmail.com",
+      "password": "123456",
+      "phone": "4354365"
+    },
+    {
+      "id": "wcJctzMFyDs",
+      "name": "shubham jadav",
+      "email": "shubhamjadav.tops@gmail.com",
+      "password": "123456",
+      "phone": "67677765656"
+    },
+    {
+      "id": "hFKCCaopMq0",
+      "name": "ketan",
+      "email": "ketan@gmail.com",
+      "password": "324678",
+      "phone": "32678678"
+    }
+  ],
+  "admin":[
+    {
+      "id":1,
+      "name":"admin",
+      "email":"admin@gmail.com",
+      "password":"21312"
+    },
+    {
+      "id":2,
+      "name":"subadmin",
+      "email":"admin@gmail.com",
+      "password":"21312"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
