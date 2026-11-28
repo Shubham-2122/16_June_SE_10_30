@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import Header from '../Comane/Header'
 import { useDispatch, useSelector } from 'react-redux'
-import { readData } from '../Slice/userSlice'
+import { deleteuser, readData } from '../Slice/userSlice'
+import { Link } from 'react-router-dom'
 
 function UserData() {
 
@@ -32,16 +33,16 @@ function UserData() {
                     <tbody>
                         {
                             users && users.map((data)=>{
-                                console.log(data)
+                                // console.log(data)
                                 return(
-                                    <tr>
+                                    <tr key={data.id}>
                             <th scope="row">{data.id}</th>
                             <td>{data.name}</td>
                             <td>{data.email}</td>
                             <td>
                                 <button className='btn btn-info'>View</button>
-                                <button className='btn btn-success mx-2'>Edit</button>
-                                <button className='btn btn-danger'>delete</button>
+                                <Link className='btn btn-success mx-2' to={`/edit/${data.id}`} >Edit</Link>
+                                <button className='btn btn-danger' onClick={()=>dispatch(deleteuser(data.id))}>delete</button>
                             </td>
                         </tr>
                         

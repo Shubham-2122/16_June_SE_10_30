@@ -46,7 +46,7 @@ function AdminManage() {
                                     </tr>
 
                                 )
-                            })
+                            })                                          
                         }
                     </tbody>
                 </table>
